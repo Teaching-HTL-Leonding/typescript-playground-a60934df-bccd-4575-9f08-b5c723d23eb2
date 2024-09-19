@@ -1,10 +1,10 @@
 function setup() {
     // create the canvas (German: "Leinwand")
     // Paramters are width and height
-    createCanvas(1000, 1000);
+    createCanvas(1000, 1000)
 
     // Set background color
-    background("Deepskyblue");
+    background("Deepskyblue")
 
     // Draw a rectangle 
     fill("red")
@@ -26,7 +26,7 @@ function setup() {
 
     // Draw a rectangle
     fill("brown")
-    rect(350, 200, 50 ,250)
+    rect(350, 200, 50, 250)
 
     // Draw a circle
     fill("green")
