@@ -6,8 +6,27 @@ function setup() {
     // Set background color
     background("Deepskyblue");
 
-    // test 2
-
     // Draw a rectangle 
-    rect(200, 200, 120, 200)
+    fill("red")
+    rect(100, 200, 200, 250)
+
+    // Draw a triange
+    noFill()
+    fill("Maroon")
+    triangle(70, 200, 330, 200, 195, 100)
+
+    // Draw a rectangle
+    fill("white")
+    rect(165, 350, 70, 100)
+
+    // Draw a circle
+    noFill()
+    fill("brown")
+    circle(220, 410, 10)
+
+    // Draw a rectangle
+    fill("brown")
+    rect(350, 200, 50 ,250)
+
+    // Draw a circle
 }
