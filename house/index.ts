@@ -29,4 +29,14 @@ function setup() {
     rect(350, 200, 50 ,250)
 
     // Draw a circle
+    fill("green")
+    circle(340, 200, 150)
+
+    // Draw a circle
+    fill("green")
+    circle(380, 170, 150)
+
+    // Draw a circle
+    fill("green")
+    circle(410, 200, 150)
 }
