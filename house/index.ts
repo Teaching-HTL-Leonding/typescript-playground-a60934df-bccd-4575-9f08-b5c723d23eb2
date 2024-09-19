@@ -6,7 +6,7 @@ function setup() {
     // Set background color
     background("Deepskyblue");
 
-    // test
+    // test 2
 
     // Draw a rectangle 
     rect(200, 200, 120, 200)
