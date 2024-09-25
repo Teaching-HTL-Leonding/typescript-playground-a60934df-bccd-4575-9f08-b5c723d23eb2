@@ -1,26 +1,39 @@
 function setup() {
-    // create the canvas (German: "Leinwand")
-    // Paramters are width and height
-    createCanvas(350, 350)
+    createCanvas(500, 600);
+    background(146, 251, 254);
 
-    // Set background color
-    background("cyan")
+    fill(211, 211, 211);
+    stroke("black");
+    strokeWeight(2);
+    circle(245, 350, 300);
 
-    // Draw a circle
-    fill("Lightgray")
-    circle(125, 125, 200)
 
-    // Draw a circle
-    fill("black")
-    circle(410, 320, 30)
+    fill(239, 194, 203);
+    triangle(230, 365, 
+             260, 365,
+             245, 377);
 
-    // Draw a circle
-    fill("black")
-    circle(290, 320, 30)
+    strokeWeight(2.3);
+    line(245, 377, 245, 400);
 
-// Draw a triangle
-triangle(60, 100, 60, 40, 100, 40)
+    line(245, 400, 220, 410);
+    line(245, 400, 270, 410);
 
-// Draw a triangle
-triangle(60, 200, 100, 260, 100, 40)
-}
+    line(220, 410, 165, 395);
+    line(270, 410, 325, 395);
+
+    line(270, 370, 325, 355);
+    line(220, 370, 165, 355);
+
+    line(220, 380, 165, 380);
+    line(270, 380, 325, 380);
+    
+    fill(211, 211, 211);
+    triangle(120, 235, 160, 115, 210, 185);
+    triangle(390, 245, 370, 115, 300, 190);
+
+    fill("black");
+    noStroke();
+    circle(205, 330, 28);
+    circle(285, 330, 28);
+}}
