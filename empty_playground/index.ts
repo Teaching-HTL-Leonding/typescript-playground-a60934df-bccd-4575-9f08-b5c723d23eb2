@@ -1,15 +1,17 @@
 function setup() {
     createCanvas(400, 400)
 
-const text1: string = `hello`
-const text2: string = `world`
 
-let text3 = `${text1} ${text2}`
-text3 = `${text3}!`
-text(text3, 50, 50)
+}
+let x: number = 0
+let direction: number = +1
 
+function draw(){
+background("black")
 
-const longtext= `Das ist langeeeeeeer texthhhhhhhhhhhhhhhwwwwwwwwiiiiihhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh`
-text(longtext, 0, 200, 400, 400)
-
+x = x + direction
+if (x >=width){
+    direction = -1
+}
+circle(x, height / 2, 50)
 }
