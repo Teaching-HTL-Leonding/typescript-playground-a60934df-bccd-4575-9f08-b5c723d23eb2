@@ -1,11 +1,11 @@
 function setup() {
     createCanvas(400, 400)
 
-}
-let x: number = 0
+const text1: string = `hello`
+const text2: string = `world`
 
-function draw() {
-     background("yellow")
-     x++
-     circle(x, 100, 50)
+let text3 = `${text1} ${text2}`
+text3 = `${text3}!`
+text(text3, 50, 50)
+
 }
