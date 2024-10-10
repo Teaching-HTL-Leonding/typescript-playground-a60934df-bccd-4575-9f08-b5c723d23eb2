@@ -4,10 +4,12 @@ function setup() {
 
 const circleDiameter = 50;
 
+let circleCenterY = 1;
 let circleCenterX = 0;
-let direction = 2;
+let directionX = 2;
+let directionY = 2;
 
-// Remember: The _draw_ method is called FOR EVERY FRAME
+// Remember: The draw method is called FOR EVERY FRAME
 function draw() {
   background("gold");
 
@@ -16,13 +18,23 @@ function draw() {
   fill("lime");
   circle(circleCenterX, height / 2, circleDiameter);
 
-  circleCenterX += direction;
+  circleCenterX += directionX;
 
-  //                         +----------------------------- OR operator
-  //                         |
-  //                         v
+  // Use logical OR operator to check bounds for X direction
   if (circleCenterX >= width || circleCenterX <= 0) {
     // Reverse sign of direction (positive -> right, negative -> left)
-    direction *= -1; 
+    directionX *= -1; 
+  }
+
+  stroke("white");
+  strokeWeight(3);
+  fill("skyblue");
+  circle(width / 2, circleCenterY, circleDiameter);
+
+  circleCenterY += directionY;
+
+  // Use logical OR operator to check bounds for Y direction
+  if (circleCenterY >= height || circleCenterY <= 0) {
+    directionY *= -1; 
   }
 }
