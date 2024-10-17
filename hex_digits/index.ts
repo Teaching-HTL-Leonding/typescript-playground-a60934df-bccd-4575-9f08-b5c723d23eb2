@@ -1,8 +1,8 @@
 function setup() {
-  const num = Math.floor(random(0, 1_000_000));
-
   createCanvas(320, 400)
-  background("black")
+  background(0)
+
+  const num = Math.floor(random(0, 10000));
 
   noFill()
   strokeWeight(2)
@@ -12,29 +12,74 @@ function setup() {
   noFill()
   strokeWeight(2)
   stroke("yellow")
-  rect(120, 150, 70, 100)
+  rect(130, 150, 70, 100)
 
   noFill()
   strokeWeight(2)
   stroke("yellow")
-  rect(210, 150, 70, 100)
+  rect(230, 150, 70, 100)
 
- 
-
-  
-
-  textAlign(CENTER, CENTER)
-  fill("yellow")
-  noStroke()
+  textAlign(CENTER, CENTER);
+  fill("yellow");
+  noStroke();
   text(num, width / 2, height - 20)
 
-  textAlign(CENTER, CENTER)
-  fill("yellow")
-  noStroke()
+  textAlign(CENTER, CENTER);
+  fill("yellow");
+  noStroke();
   textSize(100)
-  text(Math.floor(num % 16), width / 2, height - 190)
+  const hexdigit1 = num % 16
+  if (hexdigit1 === 10) {
+    text('A', width / 1.2, height - 190,)
+  } else if (hexdigit1 === 11) {
+    text('B', width / 1.2, height - 190,)
+  } else if (hexdigit1 === 12) {
+    text('C', width / 1.2, height - 190,)
+  } else if (hexdigit1 === 13) {
+    text('D', width / 1.2, height - 190,)
+  } else if (hexdigit1 === 14) {
+    text('E', width / 1.2, height - 190,)
+  } else if (hexdigit1 === 15) {
+    text('F', width / 1.2, height - 190,)
+  } else if (hexdigit1 < 10) { text(hexdigit1, width / 1.2, height - 190,) }
+textAlign(CENTER, CENTER);
+  fill("yellow");
+  noStroke();
+  textSize(100)
+  const hexdigit2 = Math.floor(num / 16) % 16
+  if (hexdigit2 === 10) {
+    text('A', width / 1.9, height - 190,)
+  } else if (hexdigit2 === 11) {
+    text('B', width / 1.9, height - 190,)
+  } else if (hexdigit2 === 12) {
+    text('C', width / 1.9, height - 190,)
+  } else if (hexdigit2 === 13) {
+    text('D', width / 1.9, height - 190,)
+  } else if (hexdigit2 === 14) {
+    text('E', width / 1.9, height - 190,)
+  } else if (hexdigit2 === 15) {
+    text('F', width / 1.9, height - 190,)
+  } else if (hexdigit2 < 10) { text(hexdigit2, width / 1.9, height - 190,) }
 
-  text(Math.floor(num / 16 )%16, width / 3, height - 190)
-  text(Math.floor(num / 256) % 16, width / 1.7, height - 190)
-  
+  textAlign(CENTER, CENTER);
+  fill("yellow");
+  noStroke();
+  textSize(100)
+  const hexdigit3 = Math.floor(num / 256) % 16
+  if (hexdigit3 === 10) {
+    text('A', width / 4.9, height - 190,)
+  } else if (hexdigit3 === 11) {
+    text('B', width / 4.9, height - 190,)
+  } else if (hexdigit3 === 12) {
+    text('C', width / 4.9, height - 190,)
+  } else if (hexdigit3 === 13) {
+    text('D', width / 4.9, height - 190,)
+  } else if (hexdigit3 === 14) {
+    text('E', width / 4.9, height - 190,)
+  } else if (hexdigit3 === 15) {
+    text('F', width / 4.9, height - 190,)
+  }
+  else if (hexdigit3 < 10) {
+    text(hexdigit3, width / 4.9, height - 190,)
+  }
 }
