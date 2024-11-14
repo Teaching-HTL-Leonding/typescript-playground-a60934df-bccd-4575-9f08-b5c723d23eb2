@@ -21,7 +21,7 @@ function setup() {
     }
 
     while (i < SIZE) {
-        line(i,20,i, SIZE)
+        line(0,i,SIZE, i)
         i += GRID
     }
 }
