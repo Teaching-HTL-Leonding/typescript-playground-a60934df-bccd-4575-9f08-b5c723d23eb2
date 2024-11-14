@@ -6,7 +6,18 @@ function setup() {
     background("black");
 
     noStroke();
-let i = SIZE
+let i = 0
+while (i <= SIZE){
+    fill("lime")
+    rect(0,i,SIZE,STRIPE_THICKNESS)
+    fill("yellow")
+    rect(0,i + STRIPE_THICKNESS,SIZE,STRIPE_THICKNESS)
+    
+    i += STRIPE_THICKNESS * 2
+
+
+
+}
 
 
 }
