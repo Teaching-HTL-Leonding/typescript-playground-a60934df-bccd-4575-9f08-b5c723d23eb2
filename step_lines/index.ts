@@ -26,12 +26,18 @@ function setup() {
 
     // Draw left part of the lines
     stroke("yellow");
+let h = GRID
+while (h < SIZE) {
+    line(0, h, h, h)
+    h += GRID}
+
+// Draw right part of the lines
+stroke("red");
+
 let x = GRID
-while (x < SIZE){
-    line(0,x,SIZE,x)
-    x += GRID
-}
-    // Draw right part of the lines
-    stroke("red");
-    // <<< Write your code here
-}
+while (x < SIZE) {
+    line(400, x, x, x)
+    x += GRID}
+  }
+
+
