@@ -13,7 +13,5 @@ function setup() {
     stroke("yellow");
     noFill();
 
-for (let i )
-
-
+    // <<< Add code to draw the triangles here
 }
