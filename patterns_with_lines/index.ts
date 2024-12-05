@@ -15,6 +15,14 @@ function mouseMoved() {
     resetMatrix();
     background("black");
     strokeWeight(2);
+    noStroke()
+    textSize(17)
+    textAlign(CENTER,CENTER)
+    fill("white")
+    let mousexnumber = Math.round(mouseX / 601 * 100)
+    text(`${mouseX} of 601 = ${mousexnumber}%`,70,295)
+    
+
 
     noFill();
     stroke("aqua");
@@ -34,6 +42,7 @@ function mouseMoved() {
         height1 = 0
         height2 = 5
     }
-
+    fill("black")
+rect(0,301,10,100)
    
 }
