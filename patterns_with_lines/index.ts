@@ -33,4 +33,13 @@ translate(10,0)
 height1 = 0
 height2= 5
     }
+
+    let height3 = 0
+    let height4 = 5
+
+    for ( let j = 0; j < 601; j++){
+        for (let k = 0; k < 50; k++){
+            line(10,height4,0,height3)
+        }
+    }
 }
