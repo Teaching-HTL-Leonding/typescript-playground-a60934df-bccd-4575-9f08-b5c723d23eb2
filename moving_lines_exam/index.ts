@@ -17,8 +17,19 @@ let lineStartDy: number = 0;
 let lineEndDx: number = 0;      // Movement of end point per frame in X and Y direction
 let lineEndDy: number = 0;
 
+let lineStartA: number = 0;     // Start coordinates of line
+let lineStartB: number = 0;
+let lineEndA: number = 0;       // End coordinates of line
+let lineEndB: number = 0;
+
+let lineStartLx: number = 0;    // Movement of start point per frame in X and Y direction
+let lineStartLy: number = 0;
+let lineEndLx: number = 0;      // Movement of end point per frame in X and Y direction
+let lineEndLy: number = 0;
+
 let minColor = 0;               // Lower bound of random hue value
 let maxColor = 360;             // Upper bound of random hue value
+// Upper bound of random hue value
 
 function setup() {
     createCanvas(500, 500);
@@ -36,6 +47,18 @@ function setup() {
     lineEndDx = random(0, 5);
     lineEndDy = random(0, 5);
 
+    // Set random start and end position
+    lineStartA = random(30, 450);
+    lineStartB = random(50, 450);
+    lineEndA = random(50, 450);
+    lineEndB = random(50, 450);
+
+    // Set random movement
+    lineStartLx = random(0, 5);
+    lineStartLy = random(0, 5);
+    lineEndLx = random(0, 5);
+    lineEndLy = random(0, 5);
+
     // Set random color
     lineColor = random(minColor, maxColor);
 }
@@ -50,6 +73,7 @@ function draw() {
     line(lineStartX, lineStartY, lineEndX, lineEndY);
 
     // Move start and end point
+
     lineStartX += lineStartDx;
     lineStartY += lineStartDy;
     lineEndX += lineEndDx;
@@ -70,5 +94,26 @@ function draw() {
         lineEndDy = -lineEndDy;
     }
 
+
+    lineStartA += lineStartLx;
+    lineStartB += lineStartLy;
+    lineEndA+= lineEndLx;
+    lineEndB += lineEndLy;
+
+    // Reverse direction when edge has been reached
+    if (lineStartA < 0 || lineStartA > width) {
+        lineStartLx = -lineStartLx;
+    }
+    if (lineStartB < 0 || lineStartB > height) {
+        lineStartLy = -lineStartLy;
+    }
+
+    if (lineEndA < 0 || lineEndA > width) {
+        lineEndLx = -lineEndLx;
+    }
+    if (lineEndB < 0 || lineEndB > height) {
+        lineEndLy = -lineEndLy;
+    }
     pop();
+
 }
