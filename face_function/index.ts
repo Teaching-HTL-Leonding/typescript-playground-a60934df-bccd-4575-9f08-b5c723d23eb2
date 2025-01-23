@@ -1,17 +1,17 @@
-let nextSmiling = true; 
+let nextSmiling = true;
 
 function setup() {
   createCanvas(500, 500);
-  background("black");
+  background("white");
   angleMode(DEGREES);
 
- 
-  smile(nextSmiling); 
+
+  smile(nextSmiling);
 }
 
 function mouseClicked() {
-  nextSmiling = nextSmiling; 
-  smile(nextSmiling); 
+  nextSmiling = !nextSmiling;
+  smile(nextSmiling);
 }
 
 
@@ -20,10 +20,10 @@ function smile(happy: boolean) {
   translate(random(0, width), random(0, height));
   scale(0.2);
 
-  stroke("white");
-  strokeWeight(1);
+  stroke("black");
+  strokeWeight(10);
   if (happy) {
-    fill("crimson");
+    fill("white");
   } else {
     fill("crimson");
   }
@@ -40,6 +40,7 @@ function smile(happy: boolean) {
     arc(200, 250, 200, 150, 0, 180);
   } else {
     arc(200, 300, 200, 150, 180, 360);
+
   }
 
   pop();
