@@ -1,23 +1,19 @@
-let nextSmile = true
+let nextSmiling = true; 
 
 function setup() {
-  createCanvas(500, 500)
-  angleMode(DEGREES)
+  createCanvas(500, 500);
+  angleMode(DEGREES);
 
  
-  smile(nextSmiling)
+  smile(nextSmiling); 
 }
 
 function mouseClicked() {
-  nextSmiling = !nextSmiling; // Toggle the next face
-  smile(nextSmiling); // Draw the next face
+  nextSmiling = !nextSmiling; 
+  smile(nextSmiling); 
 }
 
-// Function DEFINITION
-//       +-------------------------- Function name
-//       |     +-------------------- Parameter name
-//       |     |      +------------- Parameter type
-//       v     v      v
+
 function smile(happy: boolean) {
   push();
   translate(random(0, width), random(0, height));
