@@ -2,6 +2,7 @@ let nextSmiling = true;
 
 function setup() {
   createCanvas(500, 500);
+  background("black");
   angleMode(DEGREES);
 
  
@@ -9,7 +10,7 @@ function setup() {
 }
 
 function mouseClicked() {
-  nextSmiling = !nextSmiling; 
+  nextSmiling = nextSmiling; 
   smile(nextSmiling); 
 }
 
@@ -19,12 +20,12 @@ function smile(happy: boolean) {
   translate(random(0, width), random(0, height));
   scale(0.2);
 
-  stroke("black");
-  strokeWeight(10);
+  stroke("white");
+  strokeWeight(1);
   if (happy) {
-    fill("yellow");
+    fill("crimson");
   } else {
-    fill("lime");
+    fill("crimson");
   }
 
   circle(200, 200, 350);
