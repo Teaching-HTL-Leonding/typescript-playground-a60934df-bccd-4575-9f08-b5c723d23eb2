@@ -37,7 +37,25 @@ function draw() {
         drawRailroad(i);
     }
     for (let i = 0; i < 5; i++) {
+        drawRailroad2(i);
+    }
+    for (let i = 0; i < 5; i++) {
+        drawRailroad3(i);
+    }
+    for (let i = 0; i < 4; i++) {
         drawWagon(i);
+    }
+    for (let i = 0; i < 5; i++) {
+        drawWagon2(i);
+    }
+    for (let i = 0; i < 6; i++) {
+        drawWagon3(i);
+    }
+    for (let i = 0; i < 5; i++) {
+        drawRailroad4(i);
+    }
+    for (let i = 0; i < 8; i++) {
+        drawWagon4(i);
     }
 
     // <<< Add code to draw six train wagons
@@ -51,11 +69,26 @@ function drawRailroad(ix: number) {
 function drawWagon(ix: number) {
     image(wagon, -WAGON_WIDTH * ix, WAGON_HEIGHT * ix, wagon.width, wagon.height);
 WAGON_HEIGHT
-
-function drawWagon(ix: number) {
-    image(wagon, -WAGON_WIDTH * ix, WAGON_HEIGHT * ix, wagon.width, wagon.height);
-WAGON_HEIGHT
+}
+function drawRailroad2(ix: number) {
+    image(railroad, -RAILROAD_WIDTH * ix + 100, RAILROAD_HEIGHT * ix + 100, railroad.width, railroad.height);
 }
 
-// <<< Add a function that draws a train wagon in analogy to drawRailroad
+function drawWagon2(ix: number) {
+    image(wagon, -WAGON_WIDTH * ix + 100, WAGON_HEIGHT * ix + 100, wagon.width, wagon.height);
+WAGON_HEIGHT
+}
+function drawRailroad3(ix: number) {
+    image(railroad, -RAILROAD_WIDTH * ix + 200, RAILROAD_HEIGHT * ix + 200, railroad.width, railroad.height);
+}
+function drawWagon3(ix: number) {
+    image(wagon, -WAGON_WIDTH * ix + 200, WAGON_HEIGHT * ix + 200, wagon.width, wagon.height);
+WAGON_HEIGHT
+}
+function drawRailroad4(ix: number) {
+    image(railroad, -RAILROAD_WIDTH * ix - 100, RAILROAD_HEIGHT * ix - 100, railroad.width, railroad.height);
+}
+function drawWagon4(ix: number) {
+    image(wagon, -WAGON_WIDTH * ix - 100, WAGON_HEIGHT * ix - 100, wagon.width, wagon.height);
+WAGON_HEIGHT
 }
